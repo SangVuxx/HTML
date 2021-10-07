@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Instagram</title>
+</head>
+<style>
+    /* #slideshow { 
+  margin: -10px auto; 
+  position: relative; 
+  width: 200px; 
+  height: 150px; 
+  padding: 10px; 
+  box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+} */
+#slideshow img{
+    margin-left: -6px;
+    height: 390px;
+    width: 219px;
+    margin-top: -21px;
+}
+
+#slideshow > div { 
+  position: absolute; 
+  top: 8%; 
+  left: -1px; 
+  /* right: 10px;  */
+  /* bottom: 1px;  */
+}
+</style>
+<body>
+    <div id="main" style="border: 1px solid black; height: 533px; width: 860px; margin: auto;margin-top: 50px;">
+        <div class="row">
+
+            <div id="slide" style=" height: 388px; width: 220px; position: absolute;left: 351px;top:20%">
+                <div id="slideshow">
+                    <div>
+                      <img src="1.jpg" >
+                    </div>
+                    <div>
+                      <img src="2.jpg" >
+                    </div>
+                    <div>
+                        <img src="3.jpg" >
+                    </div>
+                    <div>
+                        <img src="4.jpg" >
+                    </div>
+                    <div>
+                        <img src="5.jpg" >
+                    </div>
+                    <div>
+                        <img src="6.jpg" >
+                    </div>
+                    <div>
+                        <img src="7.jpg" >
+                    </div>
+                    <div>
+                        <img src="8.jpg" >
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="col-5">
+                <img src="login_form_img.png" alt="anh_main">
+            </div>
+            <div class="col-7" style="background-color: #f2f2f2; justify-content: center;text-align: center;position: relative;left: 20px;">
+        <div id="top">        <div class="row">
+                    <p style="margin-top: 25px;font-size: 49px;font-family: Florence, cursive;">Instagram</p>
+                </div>
+                <div class="row">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Phone number, username, or email" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      </div>
+                </div>
+                <div class="row">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Password" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      </div>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-info">
+                        <p style="color: white; font-weight: bold; line-height: 15px; text-align: center;">Send Messsage</p>
+                    </button>
+                </div>
+                <div class="row">
+                   <div class="col-5">
+                    <hr style="background-color: black; margin-top: 20px;">
+                   </div>
+                   <div class="col-2">
+                       <p style="font-size: 13px; text-align: center;vertical-align: middle;margin-top: 10px;">OR</p>
+                   </div>
+                   <div class="col-5">
+                    <hr style="background-color: black; margin-top: 20px;">
+                   </div>
+                </div>
+                <div class="row">
+                    <a href="https://www.facebook.com/" style="text-decoration: none;">Log in with Facebook</a>
+                </div>
+                <div class="row">
+                    <a href="#" style="text-decoration: none;margin-top: 10px; font-size: 13px;">Forgot password?</a>
+                </div>
+
+        </div>
+                <div class="row" style="border: 1px solid black; text-align: center; margin-top: 5px;padding: 5px 5px;vertical-align: center;">
+                    <a href="https://www.facebook.com/" style="text-decoration: none; margin-top: 5px;vertical-align: center;">Dont have an account?<strong>Sign in</strong></a>
+                </div>
+                <div class="row" style="margin-top: 10px;">
+                    <p>Get the app.</p>
+                </div>
+                <div class="row">
+                   <center><img src="get_app.png" style="height: 35px; width: 300px;"></center> 
+                </div>
+                <div class="row"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+  .fadeOut(1000)
+  .next()
+  .fadeIn(1000)
+  .end()
+  .appendTo('#slideshow');
+}, 3000);
+</script>
+</html>
